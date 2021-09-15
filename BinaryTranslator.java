@@ -3,7 +3,7 @@ import java.util.Collections;
 
 public class BinaryTranslator {
 
-  
+    
     public String asciiToBinary(String text) {
 
         ArrayList<String> binaryText = new ArrayList<String>();
@@ -50,9 +50,9 @@ public class BinaryTranslator {
         }
         return String.join("", newText);
     }
-  
-  
-    public boolean isBinary(String binaryText) {
+    
+    
+    private boolean isBinary(String binaryText) {
         for (char letter : binaryText.toCharArray()) {
             if (letter != '1' && letter != '0') {
                 return false;
@@ -60,9 +60,9 @@ public class BinaryTranslator {
         }
         return true;
     }
-  
-  
-    public String reverseString(String text) {
+    
+    
+    private String reverseString(String text) {
         StringBuilder sb = new StringBuilder();
 
         for (int i = text.length() - 1; i >= 0; i--)
@@ -70,9 +70,9 @@ public class BinaryTranslator {
 
         return sb.toString();
     }
-  
-  
-    public String fillString(String binary) {
+    
+    
+    private String fillString(String binary) {
         return String.join("", Collections.nCopies(8 - binary.length(), "0")) + binary;
     }
 }
